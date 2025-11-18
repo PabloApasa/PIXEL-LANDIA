@@ -12,15 +12,15 @@ public class SeguirJugadorCamara : MonoBehaviour
 
     private void SeguirJugador()
     {
-        escriptdelmoviminetojugador jugador = FindFirstObjectByType<scriptdelmovimientodeljugador>();
+        PlayerMove Player = FindFirstObjectByType<PlayerMove>();
 
-        if (jugador == null)
+        if (Player == null)
         {
             Debug.LogWarning("No se encontró al jugador.");
             return;
         }
         
-        Transform jugadorTransform = jugador.transform;
+        Transform jugadorTransform = Player.transform;
         cinemachineCamera.Follow = jugadorTransform;
     }
 }
