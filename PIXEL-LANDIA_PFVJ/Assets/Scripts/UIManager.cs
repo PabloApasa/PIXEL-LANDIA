@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     public void  GoMainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Escena-Menu");
+        SceneManager.LoadScene("Menu-Niveles");
     }
 
     public void QuitGame()

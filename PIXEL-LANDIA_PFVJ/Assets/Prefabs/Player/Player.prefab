@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6679447268066931662}
   - component: {fileID: 8072519333216938626}
   - component: {fileID: 2719736689488372239}
+  - component: {fileID: 4206205212503885963}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -221,6 +222,32 @@ MonoBehaviour:
   lowJumpMultiplier: 1
   spriteRenderer: {fileID: 5627956584224076032}
   animator: {fileID: 6093615646576732449}
+--- !u!114 &4206205212503885963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500602952467505808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2551028f4e0f43d4a84d8743d081bc7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSelectCharacter: 0
+  playerSelected: 3
+  animator: {fileID: 6093615646576732449}
+  spriteRenderer: {fileID: 5627956584224076032}
+  playerController:
+  - {fileID: 9100000, guid: 4ac800acb8ede2642a2d4b0ee7ceef16, type: 2}
+  - {fileID: 9100000, guid: a3f41fde4afbf8d47991c336dee321ae, type: 2}
+  - {fileID: 9100000, guid: 209a8fa6ec786544a99b99f26208bb1c, type: 2}
+  - {fileID: 9100000, guid: c61922124bf0b5347ad1022ee0b85e2b, type: 2}
+  playersRenderer:
+  - {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  - {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
+  - {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  - {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
 --- !u!1 &5930245189177726293
 GameObject:
   m_ObjectHideFlags: 0
