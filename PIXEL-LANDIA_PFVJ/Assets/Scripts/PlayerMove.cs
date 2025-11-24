@@ -16,6 +16,9 @@ public class PlayerMove : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Animator animator;
+
+    public GameObject dustLeft;
+    public GameObject dustRight;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -47,6 +50,8 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
         if (CheckGround.isGrounded == true)
         {
@@ -71,18 +76,34 @@ public class PlayerMove : MonoBehaviour
                 rb2D.linearVelocity = new Vector2(runSpeed, rb2D.linearVelocity.y);
                 spriteRenderer.flipX = false;
                 animator.SetBool("Run", true);
+
+                if (CheckGround.isGrounded == true)
+                {
+                    dustLeft.SetActive(true);
+                    dustRight.SetActive(false);
+                 }
+                
             }
             else if (Input.GetKey("a") || Input.GetKey("left"))
             {
                 rb2D.linearVelocity = new Vector2(-runSpeed, rb2D.linearVelocity.y);
                 spriteRenderer.flipX = true;
                 animator.SetBool("Run", true);
+
+                if (CheckGround.isGrounded == true)
+                {
+                    dustLeft.SetActive(false);
+                    dustRight.SetActive(true);
+                }
             }
             else
             {
                 rb2D.linearVelocity = new Vector2(0, rb2D.linearVelocity.y);
                 animator.SetBool("Run", false);
-            }
+
+                dustLeft.SetActive(false);
+                dustRight.SetActive(false);
+             }
 
             if (betterJump)
             {
