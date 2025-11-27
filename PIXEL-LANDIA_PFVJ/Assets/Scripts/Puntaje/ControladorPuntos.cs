@@ -24,4 +24,9 @@ public class ControladorPuntos : MonoBehaviour
     {
         cantidadPuntos += puntos;
     }
+
+    public float GetPuntos()
+    {
+        return cantidadPuntos;
+    }
 }
