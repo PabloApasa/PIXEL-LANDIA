@@ -1981,6 +1981,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164776371760722140, guid: a9d61686e662e6b4aa94dff453aa7343, type: 3}
+      propertyPath: nextSceneName
+      value: Escana-C
+      objectReference: {fileID: 0}
     - target: {fileID: 2213980201262433300, guid: a9d61686e662e6b4aa94dff453aa7343, type: 3}
       propertyPath: m_Camera
       value: 
