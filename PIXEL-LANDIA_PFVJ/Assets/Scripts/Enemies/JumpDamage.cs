@@ -18,7 +18,7 @@ public class JumpDamage : MonoBehaviour
         {
             collision.gameObject.GetComponent<Rigidbody2D>().linearVelocity = (Vector2.up * jumpForce);
             LosseLifeAndHit();
-            CheckLife();
+            
         }
     }
 
@@ -26,6 +26,7 @@ public class JumpDamage : MonoBehaviour
     {
         lifes--;
         animator.Play("Hit");
+        CheckLife();
     }
 
     public void CheckLife()
